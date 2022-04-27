@@ -1,18 +1,26 @@
-# JS Memory Analysor
+I don't know if this software is useful for 2022, but i'm trying to make it work. 
 
+I add webpack5, babel, some polyfills and until now i can't make it work =(.
+
+Feel free to contribute. 
+
+# JS Memory Analysor
 
 ## Overview
 Memory leak is an important problem in JavaScript/NodeJS, though they have Garbage collection mechanism. Now there are some tools are provided to detect memory leak for JavaScript/NodeJS, such as Chrome Devtools, Webstorm and so on. These tools solve our problems in some extent. However, there are also some problems left, such as not smart enough to recommend suspected objects.
-</br>
-</br>
+<br/>
+<br/>
 Compared to above, JS Memory Analysor provides more convenient functionality to help us find memory leak objects more quickly. To retained the habits of JS developers and reduce the learning cost, JS Memory Analysor is developed base on Chrome Devtools.
 
 ## Table of Contents
 
-- [Quick start](#quick-start)
-- [Features](#features)
-- [Todo list](#todo-list)
-- [License](#license)
+- [JS Memory Analysor](#js-memory-analysor)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+  - [Features](#features)
+  - [Todo List](#todo-list)
+  - [License](#license)
 
 ## Quick Start
 
