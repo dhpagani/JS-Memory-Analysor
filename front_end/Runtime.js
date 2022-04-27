@@ -78,23 +78,25 @@ var Runtime = class {
      * @param {function(*)} reject
      */
     function load(fulfill, reject) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.onreadystatechange = onreadystatechange;
+      const t = import(`./${url}`);
+      fulfill(t.target.response);
+      // var xhr = new XMLHttpRequest();
+      // xhr.open('GET', url, true);
+      // xhr.onreadystatechange = onreadystatechange;
 
-      /**
-       * @param {Event} e
-       */
-      function onreadystatechange(e) {
-        if (xhr.readyState !== XMLHttpRequest.DONE)
-          return;
+      // /**
+      //  * @param {Event} e
+      //  */
+      // function onreadystatechange(e) {
+      //   if (xhr.readyState !== XMLHttpRequest.DONE)
+      //     return;
 
-        if ([0, 200, 304].indexOf(xhr.status) === -1)  // Testing harness file:/// results in 0.
-          reject(new Error('While loading from url ' + url + ' server responded with a status of ' + xhr.status));
-        else
-          fulfill(e.target.response);
-      }
-      xhr.send(null);
+      //   if ([0, 200, 304].indexOf(xhr.status) === -1)  // Testing harness file:/// results in 0.
+      //     reject(new Error('While loading from url ' + url + ' server responded with a status of ' + xhr.status));
+      //   else
+      //     fulfill(e.target.response);
+      // }
+      // xhr.send(null);
     }
   }
 
@@ -1089,6 +1091,5 @@ ServicePort.prototype = {
    */
   close() {}
 };
+window.Runtime = Runtime;
 
-/** @type {!Runtime} */
-var runtime;

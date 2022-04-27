@@ -19,3 +19,4 @@ npm-debug.log
 package-lock.json
 .DS_Store
 .idea/
+dist/

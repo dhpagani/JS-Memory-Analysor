@@ -3,8 +3,12 @@
   "description": "A tool to detect js memory leaks",
   "version": "0.0.1",
   "scripts": {
-    "start": "node server.js -p 9999"
+    "start": "node server.js -p 9999",
+    "babel": "babel -d dist front_end --delete-dir-on-start --copy-files --source-maps"
   },
+  "browserslist": [
+    "ie 6"
+  ],
   "repository": {
     "type": "git",
     "url": ""
@@ -19,10 +23,28 @@
   "license": "BSD",
   "devDependencies": {
     "ajv": "^5.1.5",
-    "eslint": "3.10.0"
+    "css-loader": "^6.7.1",
+    "eslint": "3.10.0",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/runtime-corejs3": "^7.17.9",
+    "@webcomponents/shadydom": "^1.9.0",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
+    "babel-loader": "^8.2.5",
+    "codemirror": "^5.41.0",
     "commander": "^2.14.1",
-    "express": "^4.16.2"
+    "core-js": "^3.22.2",
+    "document-register-element": "^1.14.10",
+    "echarts": "^3.7.1",
+    "express": "^4.16.2",
+    "html-webpack-plugin": "^5.5.0",
+    "thread-loader": "^3.0.4",
+    "webpack": "^5.72.0",
+    "webpack-dev-server": "^4.8.1"
   }
 }

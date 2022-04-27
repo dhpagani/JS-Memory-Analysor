@@ -6,10 +6,10 @@ var program = require("commander")
 
 var port = process.argv[3] || 9999;
 
-app.use(express.static(path.join(__dirname, 'front_end')))
+app.use(express.static(path.join(__dirname, 'dist')))
 
 app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, './front_end/inspector.html'));
+    res.sendFile(path.join(__dirname, './dist/inspector.html'));
 });
 
 app.listen(port, function(){

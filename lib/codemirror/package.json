@@ -1,0 +1,5 @@
+{
+  "name": "codemirror",
+  "main": "index.js",
+  "private": true
+}
